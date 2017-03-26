@@ -60,10 +60,16 @@ apply(otventiz_normalised,1,mean)
 
 #### 5. feladat ####
 
+source("~/homework-03/src/homework-03-functions.R")
+
 require(fivethirtyeight)
 data("comic_characters")
 
 namesplit <- strsplit(comic_characters$name, " (", fixed = T)
 comic_characters$name <- sapply(namesplit,"[",1)
+
+get_gender("Thor")
+get_gender("Katherine Pryde")
+get_gender("Loki Laufeyson")
 
 
